@@ -4,13 +4,7 @@ Rick and Morty Api Kotlin-MVVM
 
 Implemented best practices using Android Architecture Components
 
-ViewModel
-LiveData
-Glide(image downloader, has built in cache)
-Kotlin Coroutines
-Retrofit
-Navigation
-Hilt (for dependency injection)
+ViewModel, LiveData, Glide(image downloader, has built in cache), Kotlin Coroutines, Retrofit, Navigation, Hilt (for dependency injection)
 
 Room : Given more time I would prefer implement it, as a object-mapping library that provides local data persistence.
 
@@ -20,3 +14,4 @@ URLs Done
 3. Displayed fetched Character Images and names on the screen (List/Grid) Done 
 4. Add search functionality in order to search any character from the Characters list.Missing
 5. Tap on any character will fetch more details about the character - Name, Status and so on.Done 
+
