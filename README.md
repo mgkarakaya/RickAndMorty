@@ -1,9 +1,9 @@
 # RickAndMorty
 Rick and Morty Api Kotlin-MVVM
 
-1. Query the Rick And Morty Base API URL - https://rickandmortyapi.com/api, and fetch Character
+Done 1. Query the Rick And Morty Base API URL - https://rickandmortyapi.com/api, and fetch Character
 URLs
-2. Use the Character URL fetched from the First Api call to download characters.
-3. Display fetched Character Images and names on the screen (List/Grid)
-4. Add search functionality in order to search any character from the Characters list.
-5. Tap on any character will fetch more details about the character - Name, Status and so on.
+Done 2. Use the Character URL fetched from the First Api call to download characters.
+Done 3. Displayed fetched Character Images and names on the screen (List/Grid)
+Missing 4. Add search functionality in order to search any character from the Characters list.
+Done 5. Tap on any character will fetch more details about the character - Name, Status and so on.
