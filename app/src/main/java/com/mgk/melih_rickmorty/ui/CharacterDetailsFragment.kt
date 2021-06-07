@@ -22,7 +22,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class CharacterDetailsFragment : Fragment() {
 
     private lateinit var binding: CharacterDetailsFragmentBinding
-    private val viewModel: CharacterDetailsViewModel by viewModels()
     private val args: CharacterDetailsFragmentArgs by navArgs()
 
 

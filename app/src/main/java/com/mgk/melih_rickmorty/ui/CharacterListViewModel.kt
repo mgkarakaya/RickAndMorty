@@ -1,14 +1,12 @@
 package com.mgk.melih_rickmorty.ui
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import androidx.paging.LivePagedListBuilder
-import androidx.paging.PagedList
-import com.mgk.melih_rickmorty.data.CharactersPagingDataSourceFactory
+import androidx.lifecycle.*
+import androidx.paging.*
 import com.mgk.melih_rickmorty.data.RmRepository
 import com.mgk.melih_rickmorty.model.CharacterSingle
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /*
@@ -20,18 +18,10 @@ class CharacterListViewModel @Inject constructor(private val repository: RmRepos
     ViewModel() {
 
 
-    private val pageListConfig: PagedList.Config = PagedList.Config.Builder()
-        .setPageSize(PAGE_SIZE)
-        .setPrefetchDistance(2* PAGE_SIZE)
-        .build()
-    private val dataSourceFactory = CharactersPagingDataSourceFactory(viewModelScope, repository)
+    fun getCharacters(): Flow<PagingData<CharacterSingle>> {
 
-    val charactersPagedListLiveData: LiveData<PagedList<CharacterSingle>> =
-        LivePagedListBuilder(dataSourceFactory, pageListConfig).build()
+        return repository.getSearchResultStream().cachedIn(viewModelScope)
 
-
-
-    companion object {
-        private const val PAGE_SIZE = 30
     }
+
 }
