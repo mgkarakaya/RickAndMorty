@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.paging.PagedListAdapter
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +13,7 @@ import com.mgk.melih_rickmorty.databinding.ListItemCharacterBinding
 import com.mgk.melih_rickmorty.model.CharacterSingle
 import com.mgk.melih_rickmorty.ui.CharacterListFragmentDirections
 
-class CharacterListAdapter: PagedListAdapter<CharacterSingle,RecyclerView.ViewHolder>(CharacterDiffCallback()) {
+class CharacterListAdapter: PagingDataAdapter<CharacterSingle,RecyclerView.ViewHolder>(CharacterDiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return CharacterViewHolder(
             ListItemCharacterBinding.inflate(

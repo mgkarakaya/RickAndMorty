@@ -21,8 +21,9 @@ interface RmRetrofitService {
         @Query("page") pageIndex: Int
     ): CharacterList
 
-    @GET("character/{id}")
-    suspend fun getCharacter(@Path("id") id: Int): Response<CharacterSingle>
+    @GET("character/}")
+    suspend fun filterCharacter( @Query("query") query: String): Response<CharacterSingle>
+
 
     companion object {
         private const val BASE_URL = "https://rickandmortyapi.com/api/"
